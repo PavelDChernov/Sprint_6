@@ -44,17 +44,12 @@ public class LionParametrizedTests {
     }
 
     @Test
-    public void doesHaveManeReturnsTrueIfMale() throws Exception {
+    public void doesHaveManeReturnsTrueIfMaleFalseIfFemale() throws Exception {
+        Lion lion = new Lion(feline, sex);
         if (sex.equals("Самец")) {
-            Lion lion = new Lion(feline, sex);
             assertTrue("Самец, doesHaveMane: ", lion.doesHaveMane());
         }
-    }
-
-    @Test
-    public void doesHaveManeReturnsFalseIfFemale() throws Exception {
-        if (sex.equals("Самка")) {
-            Lion lion = new Lion(feline, sex);
+        else {
             assertFalse("Самка, doesHaveMane: ", lion.doesHaveMane());
         }
     }
