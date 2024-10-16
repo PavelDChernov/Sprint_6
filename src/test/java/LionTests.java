@@ -72,7 +72,7 @@ public class LionTests {
     public void lionConstructorExceptionMessageCheck() throws Exception {
         assumeThat(sex, not(anyOf(is("Самец"), is("Самка"))));
         try {
-            Lion lion = new Lion(feline, "");
+            Lion lion = new Lion(feline, sex);
         }
         catch (Exception exception) {
             assertEquals("Используйте допустимые значения пола животного - самец или самка", exception.getMessage());
