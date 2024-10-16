@@ -47,11 +47,11 @@ public class LionTests {
     }
 
     @Test
-    public void getFoodInvokesFelineEatMeat() throws Exception {
+    public void getFoodInvokesFelineGetFoodPredator() throws Exception {
         assumeThat(sex, anyOf(is("Самец"), is("Самка")));
         Lion lion = new Lion(feline, sex);
         lion.getFood();
-        Mockito.verify(feline, Mockito.times(1)).eatMeat();
+        Mockito.verify(feline, Mockito.times(1)).getFood("Хищник");
     }
 
     @Test
