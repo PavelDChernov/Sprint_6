@@ -31,9 +31,8 @@ public class LionTestsNonParametrized {
 
     @Test
     public void lionConstructorExceptionMessageCheck() throws Exception {
-        Lion lion;
         try {
-            lion = new Lion(feline, "Лев");
+            Lion lion = new Lion(feline, "Лев");
             assertFalse("lionConstructorExceptionMessageCheck expected exception but object created", lion instanceof Lion);
         }
         catch (Exception exception) {
